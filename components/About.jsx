@@ -5,7 +5,7 @@ import { Sparkles, Briefcase, Globe, Bot } from 'lucide-react';
 
 const stats = [
   { icon: Briefcase, label: '2+ Years', sub: 'Experience', color: 'from-amber-500 to-yellow-400' },
-  { icon: Globe, label: '2 Companies', sub: 'Worked With', color: 'from-orange-500 to-amber-400' },
+  { icon: Globe, label: '1 Company', sub: '& Freelance', color: 'from-orange-500 to-amber-400' },
   { icon: Sparkles, label: 'Multi-Niche', sub: 'Content Expertise', color: 'from-yellow-500 to-amber-300' },
   { icon: Bot, label: 'AI-Powered', sub: 'Workflows', color: 'from-amber-600 to-yellow-500' },
 ];
@@ -54,11 +54,12 @@ export default function About() {
           <div className="space-y-6">
             {/* Avatar */}
             <div className="reveal flex items-center gap-5 mb-6">
-              <div
-                className="w-24 h-24 rounded-2xl flex items-center justify-center text-black font-bold text-2xl amber-glow flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)' }}
-              >
-                UC
+              <div className="relative w-24 h-24 rounded-2xl overflow-hidden border-2 border-amber-400/50 amber-glow flex-shrink-0">
+                <img
+                  src="/profile.jpg"
+                  alt="Ujjwal Choudhary"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div>
                 <h3 className="text-white text-xl font-bold">Ujjwal Choudhary</h3>

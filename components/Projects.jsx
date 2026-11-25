@@ -1,27 +1,53 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { ExternalLink, TrendingUp, Linkedin, Bot } from 'lucide-react';
+import { TrendingUp, Linkedin, Bot } from 'lucide-react';
 
 const projects = [
   {
     icon: TrendingUp,
-    title: 'SEO Growth Campaign',
+    title: 'SEO & AEO Growth Campaign',
     category: 'Search Engine Optimization',
     description:
-      'Drove significant organic traffic growth for a B2B SaaS client through a comprehensive on-page and off-page SEO strategy. Conducted in-depth keyword research, optimized meta tags and schema markup, built quality backlinks, and ran monthly technical audits using Semrush and Google Search Console.',
-    results: ['150%+ organic traffic increase', 'Top 5 rankings for 20+ keywords', 'Reduced bounce rate by 30%'],
-    tags: ['On-Page SEO', 'Off-Page SEO', 'Semrush', 'GA4', 'Schema Markup', 'Link Building'],
+      'Nearly tripled organic traffic for a B2B SaaS website within three months and took its AI search citations from zero to thousands per month. The strategy combined in-depth keyword research, on-page optimization, schema markup, quality link building, and content structured for AI search engines. Monthly technical audits in Semrush and Google Search Console kept the site healthy as it scaled.',
+    results: [
+      '~3x organic traffic growth in just 3 months',
+      'From zero to thousands of monthly AI citations across AI search platforms',
+      'Top 5 rankings for 20+ keywords',
+      '30% lower bounce rate',
+    ],
+    tags: [
+      'On-Page SEO',
+      'Off-Page SEO',
+      'AEO/GEO',
+      'Semrush',
+      'Google Search Console',
+      'GA4',
+      'Schema Markup',
+      'Link Building',
+    ],
     color: 'from-amber-500 to-yellow-400',
   },
   {
     icon: Linkedin,
-    title: 'LinkedIn Brand Strategy',
+    title: 'LinkedIn Growth & Newsletter Strategy',
     category: 'Social Media & Content',
     description:
-      'Developed and executed a full LinkedIn growth strategy for a B2B technology brand. Built a consistent content calendar, crafted thought-leadership posts, optimized the company page, and grew follower engagement through strategic distribution across channels.',
-    results: ['3x increase in page impressions', 'Consistent monthly follower growth', '40%+ avg. engagement rate boost'],
-    tags: ['LinkedIn Growth', 'Content Calendar', 'Copywriting', 'Brand Strategy', 'Social Media Marketing'],
+      'Grew a LinkedIn following by about 70% in one year, entirely organically, and launched three LinkedIn newsletters with 5,000 subscribers each. The strategy combined a consistent content calendar, thought-leadership posts, a fully optimized profile, and a weekly newsletter cadence that built a loyal, returning audience. I also ran a 2-month content trial, publishing one post every day for 60 days, to test how consistency affects reach and growth.',
+    results: [
+      '~70% organic follower growth in 12 months',
+      '3 newsletters launched, 5,000 subscribers each (15,000 combined)',
+      '700-800 average readers per weekly edition on each newsletter (2,000+ combined weekly readers)',
+      '60 posts in 60 days: a daily publishing trial run over 2 months',
+    ],
+    tags: [
+      'LinkedIn Growth',
+      'Newsletter Strategy',
+      'Content Calendar',
+      'Copywriting',
+      'Brand Strategy',
+      'Social Media Marketing',
+    ],
     color: 'from-orange-500 to-amber-400',
   },
   {
@@ -29,9 +55,23 @@ const projects = [
     title: 'AI-Powered Content System',
     category: 'AI & Automation',
     description:
-      'Built a streamlined content production workflow using generative AI tools (ChatGPT, Claude, Gemini, Canva AI) to accelerate research, drafting, and design. Also optimized content for AEO/GEO — ensuring brand discoverability across AI-driven search engines like Perplexity and ChatGPT Search.',
-    results: ['60%+ faster content production', 'AI search (AEO/GEO) visibility', 'Scaled multi-format content output'],
-    tags: ['ChatGPT', 'Claude', 'Gemini', 'Canva AI', 'AEO / GEO', 'Content Strategy'],
+      'Built a streamlined content production workflow using generative AI tools (ChatGPT, Claude, Gemini, Canva AI) to speed up research, drafting, and design. I extended the system into AI video generation, turning written content into short-form videos without a traditional production setup. I also optimized content for AEO/GEO so brands show up in AI-driven search engines like Perplexity and ChatGPT Search.',
+    results: [
+      '60%+ faster content production',
+      'AI video generation added to the workflow, turning one idea into blog, social, and video formats',
+      'AEO/GEO visibility across AI search platforms',
+      'Multi-format content output at scale',
+    ],
+    tags: [
+      'ChatGPT',
+      'Claude',
+      'Gemini',
+      'Canva AI',
+      'AI Video Generation',
+      'AEO/GEO',
+      'Content Strategy',
+      'Workflow Automation',
+    ],
     color: 'from-yellow-500 to-amber-300',
   },
 ];
@@ -59,13 +99,13 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="reveal text-center mb-16">
-          <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">What I've Built</span>
+          <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">What I Achieved</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full mx-auto mt-4" />
           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-sm sm:text-base">
-            A selection of campaigns and systems that delivered measurable results.
+            Real outcomes from campaigns and systems that delivered measurable results.
           </p>
         </div>
 
@@ -98,15 +138,15 @@ export default function Projects() {
               <div className="bg-amber-400/5 border border-amber-400/10 rounded-xl p-4 space-y-1.5">
                 <div className="text-amber-400 text-xs font-semibold uppercase tracking-wider mb-2">Key Results</div>
                 {results.map((r) => (
-                  <div key={r} className="flex items-center gap-2 text-gray-300 text-xs">
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" />
+                  <div key={r} className="flex items-start gap-2 text-gray-300 text-xs leading-relaxed">
+                    <div className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0 mt-1.5" />
                     {r}
                   </div>
                 ))}
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
                 {tags.map((tag) => (
                   <span
                     key={tag}
@@ -115,14 +155,6 @@ export default function Projects() {
                     {tag}
                   </span>
                 ))}
-              </div>
-
-              {/* CTA */}
-              <div className="pt-1 mt-auto">
-                <button className="flex items-center gap-2 text-amber-400 text-sm font-semibold hover:text-amber-300 transition-colors group">
-                  View Case Study
-                  <ExternalLink size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </button>
               </div>
             </div>
           ))}

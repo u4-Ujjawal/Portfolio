@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Blog', href: '#blog' },
+  // { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -81,12 +81,12 @@ export default function Navbar() {
 
           {/* CTA + hamburger */}
           <div className="flex items-center gap-3">
-            <a
-              href="mailto:ujjwalchoudhary12345.uc82@gmail.com"
+            <button
+              onClick={() => handleNav('#contact')}
               className="hidden md:block px-4 py-2 rounded-lg btn-amber text-black font-semibold text-sm"
             >
               Hire Me
-            </a>
+            </button>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="md:hidden p-2 rounded-lg glass text-gray-300 hover:text-amber-400 transition-colors"
@@ -119,12 +119,12 @@ export default function Navbar() {
             </button>
           ))}
           <div className="pt-2">
-            <a
-              href="mailto:ujjwalchoudhary12345.uc82@gmail.com"
+            <button
+              onClick={() => handleNav('#contact')}
               className="block w-full px-4 py-3 rounded-lg btn-amber text-black font-semibold text-sm text-center"
             >
               Hire Me
-            </a>
+            </button>
           </div>
         </div>
       </div>

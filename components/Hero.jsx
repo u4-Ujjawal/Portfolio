@@ -85,9 +85,20 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 glass-amber rounded-full px-4 py-2 mb-8 text-amber-400 text-sm font-medium">
+        <div className="inline-flex items-center gap-2 glass-amber rounded-full px-4 py-2 mb-6 text-amber-400 text-sm font-medium">
           <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
           Available for Opportunities
+        </div>
+
+        {/* Profile Image */}
+        <div className="mx-auto mb-6 relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-amber-500 via-yellow-400 to-amber-600 amber-glow">
+          <div className="w-full h-full rounded-full overflow-hidden bg-surface">
+            <img
+              src="/profile.jpg"
+              alt="Ujjwal Choudhary"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
         </div>
 
         {/* Name */}
@@ -120,11 +131,8 @@ export default function Hero() {
             View My Work <ArrowRight size={18} />
           </button>
           <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('contact');
-            }}
+            href="/Ujjwal_Choudhary_Resume.pdf"
+            download="Ujjwal_Choudhary_Resume.pdf"
             className="btn-outline flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-amber-400 text-base w-full sm:w-auto"
           >
             <Download size={18} /> Download Resume
@@ -134,7 +142,9 @@ export default function Hero() {
         {/* Social links */}
         <div className="flex items-center justify-center gap-4 mb-16">
           <a
-            href="#"
+            href="https://in.linkedin.com/in/ujjawal-choudhary-bbba10257"
+            target="_blank"
+            rel="noopener noreferrer"
             className="glass w-11 h-11 rounded-full flex items-center justify-center text-gray-400 hover:text-amber-400 hover:border-amber-400/30 transition-all duration-300 hover:-translate-y-1"
             aria-label="LinkedIn"
           >

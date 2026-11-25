@@ -9,7 +9,7 @@ const footerLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Blog', href: '#blog' },
+  // { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -63,7 +63,9 @@ export default function Footer() {
                 ujjwalchoudhary12345.uc82@gmail.com
               </a>
               <a
-                href="#"
+                href="https://in.linkedin.com/in/ujjawal-choudhary-bbba10257"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-500 text-sm hover:text-amber-400 transition-colors"
               >
                 <Linkedin size={14} />

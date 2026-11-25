@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, Linkedin } from 'lucide-react';
 
 const contactInfo = [
   {
@@ -15,6 +15,12 @@ const contactInfo = [
     label: 'Phone',
     value: '+91 7354076475',
     href: 'tel:+917354076475',
+  },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/ujjawal-choudhary',
+    href: 'https://in.linkedin.com/in/ujjawal-choudhary-bbba10257',
   },
   {
     icon: MapPin,
@@ -46,13 +52,13 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    // Simulate submission
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      setForm({ name: '', email: '', subject: '', message: '' });
-    }, 1200);
+    const subject = encodeURIComponent(form.subject || 'Portfolio Enquiry');
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    );
+    window.location.href = `mailto:ujjwalchoudhary12345.uc82@gmail.com?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+    setForm({ name: '', email: '', subject: '', message: '' });
   };
 
   return (
